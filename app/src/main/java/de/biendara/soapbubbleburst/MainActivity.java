@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import de.biendara.tools.SimpleAnimationListener;
+
 public class MainActivity extends Activity implements View.OnClickListener {
     private ViewGroup container;
 
@@ -36,7 +38,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         if (v.getId()==R.id.start){
             Animation a=AnimationUtils.loadAnimation(this,R.anim.pulse);
+            a.setAnimationListener(new SimpleAnimationListener() {
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    startGame();
+                }
+            });
             v.startAnimation(a);
         }
+    }
+
+    private void startGame() {
     }
 }
