@@ -1,4 +1,4 @@
-package de.biendara.soapbubbleburst;
+package de.darklila.soapbubbleburst;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package de.biendara.soapbubbleburst;
+package de.darklila.soapbubbleburst;
 
 import org.junit.Test;
 
